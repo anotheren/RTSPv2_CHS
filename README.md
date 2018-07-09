@@ -32,6 +32,8 @@ Information about the current status of this document, any errata, and how to pr
 
 Copyright (c) 2016 IETF Trust and the persons identified as the document authors. All rights reserved.
 
+**版权所有（c）2016 IETF Trust 和所有确认为文档作者的人。**
+
 This document is subject to [BCP 78](https://tools.ietf.org/html/bcp78) and the IETF Trust's Legal Provisions Relating to IETF Documents ([http://trustee.ietf.org/license-info](http://trustee.ietf.org/license-info)) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document. Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.
 
 **本文件受 [BCP 78](https://tools.ietf.org/html/bcp78) 和 IETF Trust 有关 IETF 文件的法律规定的约束（[http://trustee.ietf.org/license-info](http://trustee.ietf.org/license-info)）自本文件发布之日起生效。请仔细阅读这些文档，因为它们描述了您对本文档的权利和限制。从本文档中提取的代码组件必须包含信任法律规定第 4.e 节中所述的简化 BSD 许可文本，并且不提供简化 BSD 许可中所述的保证。**
@@ -43,7 +45,9 @@ This document may contain material from IETF Documents or IETF Contributions pub
 ## Table of Contents 目录
 
 1. Introduction
+
 2. Protocol Overview
+
     2.1. Presentation Description
     2.2. Session Establishment
     2.3. Media Delivery Control 
@@ -52,10 +56,14 @@ This document may contain material from IETF Documents or IETF Contributions pub
         2.5.1. Media Delivery Manipulations
     2.6. Session Maintenance and Termination
     2.7. Extending RTSP
+
 3. Document Conventions
+    
     3.1. Notational Conventions
     3.2. Terminology
+
 4. Protocol Parameters
+    
     4.1. RTSP Version
     4.2. RTSP IRI and URI
     4.3. Session Identifiers
