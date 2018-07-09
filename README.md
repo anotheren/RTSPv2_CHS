@@ -44,38 +44,35 @@ This document may contain material from IETF Documents or IETF Contributions pub
 
 ## Table of Contents 目录
 
-1. Introduction
+### 1. Introduction
 
-2. Protocol Overview
+### 2. Protocol Overview
+#### 2.1. Presentation Description
+#### 2.2. Session Establishment
+#### 2.3. Media Delivery Control 
+#### 2.4. Session Parameter Manipulations 
+#### 2.5. Media Delivery 
+##### 2.5.1. Media Delivery Manipulations
+#### 2.6. Session Maintenance and Termination
+#### 2.7. Extending RTSP
 
-    2.1. Presentation Description
-    2.2. Session Establishment
-    2.3. Media Delivery Control 
-    2.4. Session Parameter Manipulations 
-    2.5. Media Delivery 
-        2.5.1. Media Delivery Manipulations
-    2.6. Session Maintenance and Termination
-    2.7. Extending RTSP
+### 3. Document Conventions
+#### 3.1. Notational Conventions
+#### 3.2. Terminology
 
-3. Document Conventions
-    
-    3.1. Notational Conventions
-    3.2. Terminology
-
-4. Protocol Parameters
-    
-    4.1. RTSP Version
-    4.2. RTSP IRI and URI
-    4.3. Session Identifiers
-    4.4. Media-Time Formats
-        4.4.1. SMPTE-Relative Timestamps
-        4.4.2. Normal Play Time
-        4.4.3. Absolute Time
-    4.5. Feature Tags
-    4.6. Message Body Tags
-    4.7. Media Properties
-        4.7.1. Random Access and Seeking
-        4.7.2. Retention
-        4.7.3. Content Modifications
-        4.7.4. Supported Scale Factors
-        4.7.5. Mapping to the Attributes
+### 4. Protocol Parameters
+#### 4.1. RTSP Version
+#### 4.2. RTSP IRI and URI
+#### 4.3. Session Identifiers
+#### 4.4. Media-Time Formats
+##### 4.4.1. SMPTE-Relative Timestamps
+##### 4.4.2. Normal Play Time
+##### 4.4.3. Absolute Time
+#### 4.5. Feature Tags
+#### 4.6. Message Body Tags
+#### 4.7. Media Properties
+##### 4.7.1. Random Access and Seeking
+##### 4.7.2. Retention
+##### 4.7.3. Content Modifications
+##### 4.7.4. Supported Scale Factors
+##### 4.7.5. Mapping to the Attributes
