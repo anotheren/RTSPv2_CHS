@@ -8,7 +8,7 @@ The protocol operates between RTSP 2.0 clients and servers, but it also supports
 
 **该协议在使用 RTSP 2.0 客户端和服务器之间运行，但它也支持在客户端和服务器之间使用代理。客户端可以通过媒体描述，或者使用外部提供的媒体描述，来从服务器请求有关流媒体的信息。媒体传送协议用于从媒体描述来建立媒体流。然后，客户端可以请求播放媒体，暂停播放或完全停止播放。请求的媒体可以包含多个音频和视频流，这些流以时间同步流的形式从服务器到客户端传递。**
 
-RTSP 2.0 is a replacement of RTSP 1.0 [[RFC2326](https://tools.ietf.org/html/rfc2326)] and this document obsoletes that specification. This protocol is based on RTSP 1.0 but is not backwards compatible other than in the basic version negotiation mechanism. The changes between the two documents are listed in [AppendixI](./Appendix I.md). There are many reasons why RTSP 2.0 can't be backwards compatible with RTSP 1.0; some of the main ones are as follows:
+RTSP 2.0 is a replacement of RTSP 1.0 [[RFC2326](https://tools.ietf.org/html/rfc2326)] and this document obsoletes that specification. This protocol is based on RTSP 1.0 but is not backwards compatible other than in the basic version negotiation mechanism. The changes between the two documents are listed in [Appendix I](./AppendixI.md). There are many reasons why RTSP 2.0 can't be backwards compatible with RTSP 1.0; some of the main ones are as follows:
 * Most headers that needed to be extensible did not define the allowed syntax, preventing safe deployment of extensions;
 * the changed behavior of the PLAY method when received in Play state;
 * the changed behavior of the extensibility model and its mechanism; and 
