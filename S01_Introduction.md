@@ -2,7 +2,7 @@
 
 This memo defines version 2.0 of the Real-Time Streaming Protocol (RTSP 2.0). RTSP 2.0 is an application-layer protocol for the setup and control over the delivery of data with real-time properties, typically streaming media. Streaming media is, for instance, video on demand or audio live streaming. Put simply, RTSP acts as a "network remote control" for multimedia servers.
 
-**本备忘录定义了实时流协议（RTSP 2.0）的 2.0 版本。RTSP 2.0 是一种应用层协议，用于设置和控制具有实时属性（通常是流媒体）的数据传输。例如，流媒体是视频点播或音频直播。 简而言之，RTSP 充当多媒体服务器的“网络远程控制”。**
+**本备忘录定义了实时流协议（RTSP 2.0）的 2.0 版本。RTSP 2.0 是一种应用层协议，用于设置和控制具有实时属性（通常是流媒体）的数据传输。例如，流媒体是视频点播或音频直播。简而言之，RTSP 充当多媒体服务器的“网络远程控制”。**
 
 The protocol operates between RTSP 2.0 clients and servers, but it also supports the use of proxies placed between clients and servers. Clients can request information about streaming media from servers by asking for a description of the media or use media description provided externally. The media delivery protocol is used to establish the media streams described by the media description. Clients can then request to play out the media, pause it, or stop it completely. The requested media can consist of multiple audio and video streams that are delivered as time-synchronized streams from servers to clients.
 
@@ -14,7 +14,7 @@ RTSP 2.0 is a replacement of RTSP 1.0 [[RFC2326](https://tools.ietf.org/html/rfc
 * the changed behavior of the extensibility model and its mechanism; and 
 * the change of syntax for some headers.
 
-**RTSP 2.0 是 RTSP 1.0 [[RFC2326](https://tools.ietf.org/html/rfc2326)] 的替代品，本文档废弃了该规范。此协议基于 RTSP 1.0，但除了基本版本协商机制外，不向后兼容。这两份文件之间的变化列于 [附录 I](./AppendixI.md) 中。 RTSP 2.0 无法与 RTSP 1.0 向后兼容的原因有很多，一些主要原因如下：**
+**RTSP 2.0 是 RTSP 1.0 [[RFC2326](https://tools.ietf.org/html/rfc2326)] 的替代品，本文档废弃了该规范。此协议基于 RTSP 1.0，但除了基本版本协商机制外，不向后兼容。这两份文件之间的变化列于 [附录 I](./AppendixI.md) 中。RTSP 2.0 无法与 RTSP 1.0 向后兼容的原因有很多，一些主要原因如下：**
 * **大多数需要可扩展的 Header 都没有定义允许的语法，从而阻止了扩展的安全部署；**
 * **在播放状态下接收时 PLAY 方法的行为发生改变；**
 * **可扩展性模型及其机制的行为发生改变；**

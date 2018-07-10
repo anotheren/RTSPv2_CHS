@@ -20,7 +20,7 @@ This is an Internet Standards Track document.
 
 **这是一份互联网标准跟踪文档。**
 
-This document is a product of the Internet Engineering Task Force (IETF).  It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in [Section 2 of RFC 7841](https://tools.ietf.org/html/rfc7841#section-2).
+This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in [Section 2 of RFC 7841](https://tools.ietf.org/html/rfc7841#section-2).
 
 **本文档是互联网工程任务组（IETF）的产品。 它代表了 IETF 社区的共识。它已经过公众审查，并已获得互联网工程指导小组（IESG）的批准发布。有关互联网标准的更多信息，请参见 [RFC 7841 第 2 节](https://tools.ietf.org/html/rfc7841#section-2)。**
 
@@ -34,7 +34,7 @@ Copyright (c) 2016 IETF Trust and the persons identified as the document authors
 
 **版权所有（c）2016 IETF Trust 和所有确认为文档作者的人。**
 
-This document is subject to [BCP 78](https://tools.ietf.org/html/bcp78) and the IETF Trust's Legal Provisions Relating to IETF Documents ([http://trustee.ietf.org/license-info](http://trustee.ietf.org/license-info)) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document. Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.
+This document is subject to [BCP 78](https://tools.ietf.org/html/bcp78) and the IETF Trust's Legal Provisions Relating to IETF Documents ([http://trustee.ietf.org/license-info](http://trustee.ietf.org/license-info)) in effect on the date of publication of this document. Please review these documents carefully, as they describe your rights and restrictions with respect to this document. Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.
 
 **本文件受 [BCP 78](https://tools.ietf.org/html/bcp78) 和 IETF Trust 有关 IETF 文件的法律规定的约束（[http://trustee.ietf.org/license-info](http://trustee.ietf.org/license-info)）自本文件发布之日起生效。请仔细阅读这些文档，因为它们描述了您对本文档的权利和限制。从本文档中提取的代码组件必须包含信任法律规定第 4.e 节中所述的简化 BSD 许可文本，并且不提供简化 BSD 许可中所述的保证。**
 
