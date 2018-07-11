@@ -68,4 +68,4 @@ To avoid an extra round trip in the session establishment of aggregated RTSP ses
 
 The SETUP response also provides additional information about the established sessions in a couple of different headers. The Media-Properties header (Section 18.29) includes a number of properties that apply for the aggregate that is valuable when doing media delivery control and configuring user interface. The Accept-Ranges header (Section 18.5) informs the client about range formats that the server supports for these media resources. The Media-Range header (Section 18.30) informs the client about the time range of the media currently available.
 
-**SETUP 响应还在几个不同的请求头中，提供有关已建立会话的附加信息。Media-Properties header（第 18.29 节）包括许多适用于聚合的属性，这些属性在进行媒体传送控制和配置用户界面时很有用。Accept-Ranges header（第 18.5 节）通知客户端服务器支持这些媒体资源的格式范围。Media-Range header（第 18.30 节）通知客户端当前媒体可用的时间范围。**
+**SETUP 响应还在几个不同的请求头中，提供有关已建立会话的附加信息。Media-Properties header（第 18.29 节）包括许多适用于聚合的属性，这些属性在进行媒体传送控制和配置用户界面时很有用。Accept-Ranges header（第 18.5 节）通知客户端，服务器当前支持的媒体资源的格式范围。Media-Range header（第 18.30 节）通知客户端，当前媒体可用的时间范围。**
