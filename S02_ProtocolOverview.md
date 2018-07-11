@@ -52,12 +52,20 @@ The RTSP client can request the establishment of an RTSP session after having us
 
 The client creates an RTSP session by sending a request using the SETUP method (Section 13.3) to the server. In the Transport header (Section 18.54) of the SETUP request, the client also includes all the transport parameters necessary to enable the media delivery protocol to function. This includes parameters that are preestablished by the presentation description but necessary for any middlebox to correctly handle the media delivery protocols. The Transport header in a request may contain multiple alternatives for media delivery in a prioritized list, which the server can select from. These alternatives are typically based on information in the presentation description.
 
-**客户端通过使用 SETUP 方法（第 13.3 节）向服务器发送请求来创建 RTSP 会话。在 SETUP请求的传输头（第 18.54 节）中，客户端还写入了包括使媒体传送协议生效所需的所有传输参数。这包括由描述信息预先建立但是任何中间框正确处理媒体传送协议所必需的参数。请求中的传输头可以包含用于在优先级列表中进行媒体传送的多个备选，服务器可以从中选择。这些替代方案通常基于描述信息。**
+**客户端通过使用 SETUP 方法（第 13.3 节）向服务器发送请求来创建 RTSP 会话。在 SETUP 请求的传输头（第 18.54 节）中，客户端还写入了包括使媒体传送协议生效所需的所有传输参数。这包括由描述信息预先建立但是任何中间框正确处理媒体传送协议所必需的参数。请求中的传输头可以包含用于在优先级列表中进行媒体传送的多个备选，服务器可以从中选择。这些替代方案通常基于描述信息。**
 
 When receiving a SETUP request, the server determines if the media resource is available and if one or more of the of the transport parameter specifications are acceptable. If that is successful, an RTSP session context is created and the relevant parameters and state is stored. An identifier is created for the RTSP session and included in the response in the Session header (Section 18.49). The SETUP response includes a Transport header that specifies which of the alternatives has been selected and relevant parameters.
 
+**当接收到 SETUP 请求时，服务器确定媒体资源是否可用，以及一个或多个传输参数是否可接受。如果成功，则创建 RTSP 会话上下文并存储相关参数和状态。RTSP 会话会同时创建一个标识符，该标识符包含在会头部的响应中（第 18.49 节）。SETUP 响应包括了传输头，其指定了哪个备选项已被选择以及相关的参数。**
+
 A SETUP request that references an existing RTSP session but identifies a new media resource is a request to add that media resource under common control with the already-present media resources in an aggregated session. A client can expect this to work for all media resources under RTSP control within a multimedia content container. However, a server will likely refuse to aggregate resources from different content containers. Even if an RTSP session contains only a single media stream, the RTSP session can be referenced by the aggregate control URI.
 
-To avoid an extra round trip in the session establishment of aggregated RTSP sessions, RTSP 2.0 supports pipelined requests; i.e., the client can send multiple requests back-to-back without waiting first for the completion of any of them. The client uses a client- selected identifier in the Pipelined-Requests header (Section 18.33) to instruct the server to bind multiple requests together as if they included the session identifier.
+**引用现有 RTSP 会话，但标识了新媒体资源的另一个 SETUP 请求，会在聚合会话中，将已经存在的媒体资源，添加到共同控制中。客户端可以认为这适用于多媒体内容容器内，所有 RTSP 控制下的媒体资源。但是，服务器仍然可能会拒绝聚合来自不同内容容器内资源的请求。即使 RTSP 会话仅包含单个媒体流，聚合控制 URI 也会引用 RTSP 会话。**
+
+To avoid an extra round trip in the session establishment of aggregated RTSP sessions, RTSP 2.0 supports pipelined requests; i.e., the client can send multiple requests back-to-back without waiting first for the completion of any of them. The client uses a client-selected identifier in the Pipelined-Requests header (Section 18.33) to instruct the server to bind multiple requests together as if they included the session identifier.
+
+**为避免在聚合 RTSP 会话的会话建立中多次发送与接收，RTSP 2.0 支持管线化请求。即，客户端可以一个接一个地发送多个请求，而无需先等待任何请求的完成。客户端在管线化请求头（第 18.33 节）中，使用客户端已选择标识符，来指示服务器将多个请求绑定在一起，就好像它们包含会话标识符一样。**
 
 The SETUP response also provides additional information about the established sessions in a couple of different headers. The Media-Properties header (Section 18.29) includes a number of properties that apply for the aggregate that is valuable when doing media delivery control and configuring user interface. The Accept-Ranges header (Section 18.5) informs the client about range formats that the server supports for these media resources. The Media-Range header (Section 18.30) informs the client about the time range of the media currently available.
+
+**SETUP 响应还在几个不同的请求头中，提供有关已建立会话的附加信息。Media-Properties header（第 18.29 节）包括许多适用于聚合的属性，这些属性在进行媒体传送控制和配置用户界面时很有用。Accept-Ranges header（第 18.5 节）通知客户端服务器支持这些媒体资源的格式范围。Media-Range header（第 18.30 节）通知客户端当前媒体可用的时间范围。**
