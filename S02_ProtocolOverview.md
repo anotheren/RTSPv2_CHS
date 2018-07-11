@@ -43,3 +43,21 @@ RTSP uses its own URI schemes ("rtsp" and "rtsps") to reference media resources 
 This specification describes in [Appendix D](./AppendixD.md) how one uses SDP [RFC4566](https://tools.ietf.org/html/rfc4566) for describing the presentation.
 
 **本规范在 [附录 D](./AppendixE.md) 中描述了如何使用 SDP [[RFC4566](https://tools.ietf.org/html/rfc4566)] 来描述信息。**
+
+## 2.2 Session Establishment 会话建立
+
+The RTSP client can request the establishment of an RTSP session after having used the presentation description to determine which media streams are available, which media delivery protocol is used, and the resource identifiers of the media streams. The RTSP session is a common context between the client and the server that consists of one or more media resources that are to be under common media delivery control.
+
+**在使用描述信息确定了哪些媒体流可用，使用哪种媒体传送协议以及媒体流的资源标识符之后，RTSP 客户端可以请求建立 RTSP 会话。RTSP 会话是客户端和服务器之间的通用上下文，其由一个或多个要在通用媒体传送控制下的媒体资源组成。**
+
+The client creates an RTSP session by sending a request using the SETUP method (Section 13.3) to the server. In the Transport header (Section 18.54) of the SETUP request, the client also includes all the transport parameters necessary to enable the media delivery protocol to function. This includes parameters that are preestablished by the presentation description but necessary for any middlebox to correctly handle the media delivery protocols. The Transport header in a request may contain multiple alternatives for media delivery in a prioritized list, which the server can select from. These alternatives are typically based on information in the presentation description.
+
+**客户端通过使用 SETUP 方法（第 13.3 节）向服务器发送请求来创建 RTSP 会话。在 SETUP请求的传输头（第 18.54 节）中，客户端还写入了包括使媒体传送协议生效所需的所有传输参数。这包括由描述信息预先建立但是任何中间框正确处理媒体传送协议所必需的参数。请求中的传输头可以包含用于在优先级列表中进行媒体传送的多个备选，服务器可以从中选择。这些替代方案通常基于描述信息。**
+
+When receiving a SETUP request, the server determines if the media resource is available and if one or more of the of the transport parameter specifications are acceptable. If that is successful, an RTSP session context is created and the relevant parameters and state is stored. An identifier is created for the RTSP session and included in the response in the Session header (Section 18.49). The SETUP response includes a Transport header that specifies which of the alternatives has been selected and relevant parameters.
+
+A SETUP request that references an existing RTSP session but identifies a new media resource is a request to add that media resource under common control with the already-present media resources in an aggregated session. A client can expect this to work for all media resources under RTSP control within a multimedia content container. However, a server will likely refuse to aggregate resources from different content containers. Even if an RTSP session contains only a single media stream, the RTSP session can be referenced by the aggregate control URI.
+
+To avoid an extra round trip in the session establishment of aggregated RTSP sessions, RTSP 2.0 supports pipelined requests; i.e., the client can send multiple requests back-to-back without waiting first for the completion of any of them. The client uses a client- selected identifier in the Pipelined-Requests header (Section 18.33) to instruct the server to bind multiple requests together as if they included the session identifier.
+
+The SETUP response also provides additional information about the established sessions in a couple of different headers. The Media-Properties header (Section 18.29) includes a number of properties that apply for the aggregate that is valuable when doing media delivery control and configuring user interface. The Accept-Ranges header (Section 18.5) informs the client about range formats that the server supports for these media resources. The Media-Range header (Section 18.30) informs the client about the time range of the media currently available.

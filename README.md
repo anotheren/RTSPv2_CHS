@@ -2,7 +2,7 @@
 
 [Real-Time Streaming Protocol Version 2.0](https://tools.ietf.org/html/rfc7826) 中文翻译项目
 
-本项目使用中英文对照的方式呈现，方便读者随时查找原文。如果你希望加入项目，欢迎认领章节。
+本项目使用中英文对照的方式呈现，方便读者随时查找原文。如果你希望加入项目，欢迎认领章节；如果发现有翻译问题，欢迎提交 PR。
 
 ## Abstract 摘要
 
